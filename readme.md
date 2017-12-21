@@ -15,7 +15,7 @@
 -reset button that will shuffle cards when clicked
 
 
-##User Personas
+## User Personas
 
 Old trekkie
 
@@ -25,25 +25,25 @@ Female trekkie
 
 Male trekkie
 
-##MVP User stories
+## MVP User stories
 
-###Old trekkie
+### Old trekkie
 
 -as a player I want to be able to move an arrow connecting a character card and quote card, get a match or not a match alert, and get my total score of how many correct on first try at the end so I can know how well I remember Star Trek
 
-###Young Star trekkie
+### Young Star trekkie
 
 -as a player I want to be able to move an arrow connecting a character card and quote card, get a match or not a match alert, and get my total score of how many correct on first try at the end so I can know  if I am a bigger Star Trek nerd than my friends
 
-###Female trekkie
+### Female trekkie
 
 -as a player I want to be able to move an arrow connecting a character card and quote card, get a match or not a match alert, and get my total score of how many correct on first try at the end so I can know  which show I know best
 
-###Male Star trekkie
+### Male Star trekkie
 
 -as a player I want to be able to move an arrow connecting a character card and quote card, get a match or not a match alert, and get my total score of how many correct on first try at the end  so I can have fun
 
-##Stretch Goals User Stories
+## Stretch Goals User Stories
 
 -as a player I want to be able to play three different show sets: original series, next generation, and voyager
 
