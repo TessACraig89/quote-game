@@ -21,3 +21,5 @@ Star Trek Card Matching Game is a single player game in which the user is presen
 - As a player, user can choose to play various versions of the game, which pertain to either the Original Series, Next Generation, or Voyager series
 
 - As a player, user can choose whether or not they would like to listen to the show's theme song while playing
+
+![alt text](https://github.com/TessACraig89/u1_w3_star_trek_matching_game/blob/master/images/wireframe.jpg)
