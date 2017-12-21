@@ -13,6 +13,7 @@ Star Trek Card Matching Game is a single player game in which the user is presen
 ## MVP User stories
 
 - As a player, user will drag arrow from one card to another in order to guess a match
+
 - As a player, user can get a new set of cards to match by clicking the reset button
 
 ## Stretch Goals User Stories
