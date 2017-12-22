@@ -5,27 +5,27 @@ $("#dealButton").click(function () {
 
 //character cards
 let characterCards = [{
-  name: "",
-  cardImage: ""
+  name: "janeway",
+  cardImage: "images/janeway.jpg"
 }, {
-  name: "",
-  cardImage: ""
+  name: "seven",
+  cardImage: "images/seven.jpg"
 }, {
-  name: "",
-  cardImage: ""
+  name: "doctor",
+  cardImage: "images/doctor.jpg"
 }];
 
-//quote cards
-let quoteCards = [{
-  name: "",
-  cardImage: ""
-}, {
-  name: "",
-  cardImage: ""
-}, {
-  name: "",
-  cardImage: ""
-}];
+// quote cards
+// let quoteCards = [{
+//   name: "",
+//   cardImage: ""
+// }, {
+//   name: "",
+//   cardImage: ""
+// }, {
+//   name: "",
+//   cardImage: ""
+// }];
 
 var cardsInPlay = [];
 //flip card
@@ -38,19 +38,20 @@ const flipCard = function() {
   }
 }
 
-//check for Match
 var checkForMatch = function() {
-  if () {
-    alert("You found a match!");
-  } else {
-    alert("Sorry, try again.");
-  }
+  // if () {
+  //   alert("You found a match!");
+  // } else {
+  //   alert("Sorry, try again.");
+    location.reload();
+  // }
+}
 
 //createBoard
 let createBoard = function() {
   for (let i = 0; i < characterCards.length; i++) {
     let cardElement = document.createElement('img');
-    cardElement.setAttribute('src', '');
+    cardElement.setAttribute('src', 'images/back.jpg');
     cardElement.setAttribute('data-id', i);
     cardElement.addEventListener('click', flipCard);
     document.getElementById('game-board').appendChild(cardElement);
