@@ -6,13 +6,13 @@ $("#dealButton").click(function () {
 //character cards
 let characterCards = [{
   name: "janeway",
-  cardImage: "images/janeway.jpg"
+  cardImage: "iimages/janeway_trans.jpg"
 }, {
   name: "seven",
-  cardImage: "images/seven.jpg"
+  cardImage: "images/seven_trans.jpg"
 }, {
   name: "doctor",
-  cardImage: "images/doctor.jpg"
+  cardImage: "images/doctor_trans.jpg"
 }];
 
 // quote cards
