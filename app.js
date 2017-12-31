@@ -25,7 +25,7 @@ let characterCards = [
   },
   {
   name: "seven",
-  cardImage: "images/seven_card.jpg"
+  cardImage: "images/seven_margin.jpg"
   },
   {
   name: "doctor",
