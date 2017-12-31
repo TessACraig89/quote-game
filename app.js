@@ -4,15 +4,15 @@ let button = document.getElementById('button');
 //quotes array
 let quotes = [
   {
-  quote: 'Your appeal to my humanity is pointless.',
+  quote: "Your appeal to my humanity is pointless.",
   author:'Seven2'
   },
   {
-  quote: 'there is coffee in that nebula',
+  quote: "There is coffee in that nebula.",
   author: 'Janeway1'
   },
   {
-  quote: 'I will complain if I want to. It is comforting.',
+  quote: "I'll complain if I want to. It's comforting.",
   author: 'Doctor3'
   },
 ]
@@ -21,7 +21,7 @@ let quotes = [
 let characterCards = [
   {
   name: "janeway",
-  cardImage: "images/janeway_card.jpg"
+  cardImage: "images/janeway_margin.jpg"
   },
   {
   name: "seven",
@@ -29,7 +29,7 @@ let characterCards = [
   },
   {
   name: "doctor",
-  cardImage: "images/doctor_card.jpg"
+  cardImage: "images/doctor_margin.jpg"
   }
 ]
 
@@ -50,11 +50,19 @@ let elem2 = document.createElement("h5");
   let quote = document.getElementById('quote');
   quote.append(elem2)
 
+// button.addEventListener("click",function(){
+//   let quote = document.getElementById('quote');
+//   quote.append(elem2)
+// })
+
+let counter = 10
+
 let sevenElement = document.getElementById("seven");
 sevenElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h5');
   if (quoteElement[0].id==='Seven2') {
     alert('Correct');
+    window.location.reload(true);
   } else {
     alert('Incorrect, try again!');
     }
@@ -65,6 +73,7 @@ janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h5');
     if (quoteElement[0].id==='Janeway1') {
       alert('Correct');
+      window.location.reload(true);
     } else {
       alert('Incorrect, try again!');
       }
@@ -75,6 +84,7 @@ doctorElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h5');
     if (quoteElement[0].id==='Doctor3') {
           alert('Correct');
+          window.location.reload(true);
     } else {
           alert('Incorrect, try again!');
       }
