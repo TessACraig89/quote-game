@@ -1,3 +1,6 @@
+let button = document.getElementById('button');
+
+
 //quotes array
 let quotes = [
   {
@@ -30,6 +33,7 @@ let characterCards = [
   }
 ]
 
+//for loop that loops through character cards array and creates and appends character card image to game board
 for (let i = 0; i < characterCards.length; i++) {
   let card = document.createElement("img");
   card.src = characterCards[i].cardImage;
@@ -38,39 +42,40 @@ for (let i = 0; i < characterCards.length; i++) {
   gameBoard.append(card)
 }
 
+
 let elem2 = document.createElement("h5");
   let source = quotes[Math.floor(Math.random()*quotes.length)];
   elem2.id = source.author;
-  elem2.innerHTML = `"<i>${source.quote}</i>"`
-  let k = document.getElementById('quote');
-  k.append(elem2)
+  elem2.innerHTML = source.quote
+  let quote = document.getElementById('quote');
+  quote.append(elem2)
 
 let sevenElement = document.getElementById("seven");
 sevenElement.addEventListener("click",function(){
-let idk = document.getElementsByTagName('h5');
-  if (idk[0].id==='Seven2') {
-    alert('YES');
+let quoteElement = document.getElementsByTagName('h5');
+  if (quoteElement[0].id==='Seven2') {
+    alert('Correct');
   } else {
-    alert('NO');
+    alert('Incorrect, try again!');
     }
   })
 
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
-let idk = document.getElementsByTagName('h5');
-    if (idk[0].id==='Janeway1') {
-      alert('YES');
+let quoteElement = document.getElementsByTagName('h5');
+    if (quoteElement[0].id==='Janeway1') {
+      alert('Correct');
     } else {
-      alert('NO');
+      alert('Incorrect, try again!');
       }
     })
 
 let doctorElement = document.getElementById("doctor");
 doctorElement.addEventListener("click",function(){
-let idk = document.getElementsByTagName('h5');
-    if (idk[0].id==='Doctor3') {
-          alert('YES');
+let quoteElement = document.getElementsByTagName('h5');
+    if (quoteElement[0].id==='Doctor3') {
+          alert('Correct');
     } else {
-          alert('NO');
+          alert('Incorrect, try again!');
       }
     })
