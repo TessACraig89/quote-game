@@ -4,21 +4,8 @@
 }
 
 @font-face {
-  font-family: "instructions";
-  src: url("instructions font/Okuda.otf");
-}
-
-footer {
-  position: relative;
-  top: 10px;
-  background-color: black;
-  height: 50px;
-}
-
-.message {
-  font-size: 20px;
-  position: relative;
-  top: 15px;
+  font-family: "fontana";
+  src: url("fontana font/Fontana.otf");
 }
 
 body {
@@ -39,17 +26,62 @@ h1 {
   -webkit-text-fill-color: #FFFFFF
 }
 
+h2 {
 
+}
 
 #instructions {
-  font-family: "instructions";
+  font-family: "fontana";
   letter-spacing: 5px;
   font-size: 30px;
 }
 
+#game-board {
+
+}
+
+
 h3 {
-  font-family: "instructions";
+  font-family: "fontana";
   letter-spacing: 5px;
   font-size: 30px;
-  
+  margin: 100px;
+  background-color: blue;
+  display: inline-block;
+  padding: 20px;
+
+}
+
+footer {
+  position: relative;
+  top: 10px;
+  background-color: black;
+  height: auto;
+  width: auto;
+  color: blue;
+  font-family: "fontana";
+  letter-spacing: 5px;
+}
+
+.github {
+  position: relative;
+  right: 500px;
+  top: 40px;
+  font-size: 20px;
+  color: white;
+}
+
+.message {
+  font-size: 25px;
+  position: relative;
+  top: 50px;
+  color: white;
+}
+
+.linkedin {
+  position: relative;
+  left: 500px;
+  color: white;
+  bottom: 100px;
+  font-size: 20px;
 }

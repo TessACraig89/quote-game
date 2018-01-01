@@ -2,7 +2,7 @@
 
 ## Description
 
-Star Trek Card Matching Game is a single player game in which the user is presented with 6 cards, 3 of which have quotes, and 3 that have a character's image and name. The user drags an arrow from a character card to a quote card or vice versa, and is alerted whether or not they found a match. Once the round of cards are completely matched the user is presented with a score of how many matches they got correct on their first try.
+Star Trek Quote Matching Game is a single player game in which the user is presented with 3 cards containing a character's image and name, and a quote. The user clicks on a characters image and is alerted whether or not they found a match. Once the round of cards are completely matched the user is presented with a score of how many matches they got correct on their first try.
 
 ## User Personas
 
