@@ -78,7 +78,6 @@ for (let i = 0; i < characterCards.length; i++) {
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
 
-
 let elem2 = document.createElement('h3');
   let source = quotes[Math.floor(Math.random()*quotes.length)];
   elem2.id = source.author;
@@ -86,43 +85,99 @@ let elem2 = document.createElement('h3');
   let quote = document.getElementById('quote');
   quote.append(elem2)
 
-
-
+//sets counter starter position to 3
+let counter = 3;
 
 // gets janeway element, that was created using for loop, and sets as janewayElement
 // adds click event to janewayElement that triggers function
 // gets h3 element, that was created and stored as elem2, containing character id and quote and stores as quoteElement
   //if character id is Janeway1
-    //alert
+    //if first attempt, counter===3
+      //alert
+      //reload window
+    //if second attempt
+      //alert
+      //reload window
+    //if 3rd attempt
+      //alert
+      //reload window
+  //else
+    //
+
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
-      alert('Correct');
-      window.location.reload(true);
-    } else {
-      alert('Incorrect, try again!');
+      if (counter===3){
+        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
+      if (counter<3 && counter>=2){
+        alert('You picked Captain Janeway! You answered correctly on your second try!');
+        window.location.reload(true);
+      }
+      if (counter<2 && counter>=1){
+        alert('You picked Captain Janeway! You answered correctly on 3rd try!');  window.location.reload(true);
+      }
+      } else {
+        counter--
+        alert('You picked Captain Janeway, sorry, this was incorrect.')
+        }
     })
 
 let sevenElement = document.getElementById("seven");
 sevenElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
   if (quoteElement[0].id==='Seven2') {
-    alert('Correct');
-    window.location.reload(true);
-  } else {
-    alert('Incorrect, try again!');
+    if (counter===3){
+      alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
     }
+    if (counter<3 && counter>=2){
+      alert('You picked Seven of Nine! You answered correctly on your 2nd try');
+      window.location.reload(true);
+    }
+    if (counter<2 && counter>=1){
+      alert('You picked Seven of Nine! You answered correctly on 3rd try!');
+      window.location.reload(true);
+    }
+    } else {
+      counter--
+      alert('You picked Seven of Nine, sorry, this was incorrect.')
+      }
   })
 
 let doctorElement = document.getElementById("doctor");
 doctorElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Doctor3') {
-          alert('Correct');
-          window.location.reload(true);
-    } else {
-          alert('Incorrect, try again!');
+      if (counter===3) {
+        alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
+      if (counter<3 && counter>=2) {
+        alert('You picked Seven of Nine! You answered correctly on your 2nd try');  window.location.reload(true);
+      }
+      if (counter<2 && counter>=1) {
+        alert('You picked the Doctor! You answered correctly on 3rd try!');
+        window.location.reload(true);
+      }
+      } else {
+        counter--
+        alert('You picked the Doctor, sorry, this was incorrect.')
+        }
     })
+
+//     if (idk[0].id==='Sagan3') {
+//           console.log('YES');
+//         if (counter===10){alert(`You picked Carl Sagan! Congratulations, you got a perfect score of ${counter}!`);  window.location.reload(true);}
+//         if (counter<10 && counter>=5){alert(`You picked Carl Sagan! You answered correctly with a final score of ${counter}`);  window.location.reload(true);}
+//         if (counter<5&&counter>0){alert(`Although you answered correctly with Carl Sagan, you received a low score of ${counter}. Please Try again`);  window.location.reload(true);}
+//         } else {
+//           counter--
+//           console.log('NO');
+//           alert(`You picked Sagan, sorry, this was incorrect. Your score has been reduced to ${counter}`)
+//           }
+//         })
+//
+//         function myFunction() {
+//     var popup = document.getElementById("myPopup");
+//     popup.classList.toggle("show");
+// }
