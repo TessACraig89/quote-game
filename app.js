@@ -102,7 +102,8 @@ let counter = 3;
       //alert
       //reload window
   //else
-    //
+    //decrement counter
+    //alert
 
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
@@ -164,20 +165,3 @@ let quoteElement = document.getElementsByTagName('h3');
         alert('You picked the Doctor, sorry, this was incorrect.')
         }
     })
-
-//     if (idk[0].id==='Sagan3') {
-//           console.log('YES');
-//         if (counter===10){alert(`You picked Carl Sagan! Congratulations, you got a perfect score of ${counter}!`);  window.location.reload(true);}
-//         if (counter<10 && counter>=5){alert(`You picked Carl Sagan! You answered correctly with a final score of ${counter}`);  window.location.reload(true);}
-//         if (counter<5&&counter>0){alert(`Although you answered correctly with Carl Sagan, you received a low score of ${counter}. Please Try again`);  window.location.reload(true);}
-//         } else {
-//           counter--
-//           console.log('NO');
-//           alert(`You picked Sagan, sorry, this was incorrect. Your score has been reduced to ${counter}`)
-//           }
-//         })
-//
-//         function myFunction() {
-//     var popup = document.getElementById("myPopup");
-//     popup.classList.toggle("show");
-// }
