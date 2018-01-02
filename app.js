@@ -1,39 +1,39 @@
 //quotes array
 let quotes = [
   {
-  quote: "There is coffee in that nebula.",
+  quote: `"There is coffee in that nebula."`,
   author: 'Janeway1'
   },
   {
-  quote: "Oh, you know the story. Girl meets boy, girl reprograms boy's subroutines.",
+  quote: `"Oh, you know the story. Girl meets boy, girl reprograms boy's subroutines."`,
   author: 'Janeway1'
   },
   {
-  quote: "At ease before you sprain something.",
+  quote: `"At ease before you sprain something."`,
   author: 'Janeway1'
   },
   {
-  quote: "I understand the concept of humor. It may not be apparent but I am often amused by human behavior.",
+  quote: `"I understand the concept of humor. It may not be apparent but I am often amused by human behavior."`,
   author: 'Seven2'
   },
   {
-  quote: "Your appeal to my humanity is pointless.",
+  quote: `"Your appeal to my humanity is pointless."`,
   author:'Seven2'
   },
   {
-  quote: "Fun will now commence.",
+  quote: `"Fun will now commence."`,
   author:'Seven2'
   },
   {
-  quote: "I'll complain if I want to. It's comforting.",
+  quote: `"I'll complain if I want to. It's comforting."`,
   author: 'Doctor3'
   },
   {
-  quote: "You should know I'm a hologram and can't be bent, spindled, or mutilated, so don't bother trying.",
+  quote: `"You should know I'm a hologram and can't be bent, spindled, or mutilated, so don't bother trying."`,
   author: 'Doctor3'
   },
   {
-  quote: "The Borg: party-poopers of the galaxy.",
+  quote: `"The Borg: party-poopers of the galaxy."`,
   author: 'Doctor3'
   }
 ]
@@ -119,10 +119,10 @@ let quoteElement = document.getElementsByTagName('h3');
       if (counter<2 && counter>=1){
         alert('You picked Captain Janeway! You answered correctly on 3rd try!');  window.location.reload(true);
       }
-      } else {
-        counter--
-        alert('You picked Captain Janeway, sorry, this was incorrect.')
-        }
+    } else {
+          counter--
+          alert('You picked the Janeway, sorry, this was incorrect. Try again!');
+          }
     })
 
 let sevenElement = document.getElementById("seven");
@@ -140,10 +140,10 @@ let quoteElement = document.getElementsByTagName('h3');
       alert('You picked Seven of Nine! You answered correctly on 3rd try!');
       window.location.reload(true);
     }
-    } else {
-      counter--
-      alert('You picked Seven of Nine, sorry, this was incorrect.')
-      }
+  } else {
+        counter--
+        alert('You picked the Seven of Nine, sorry, this was incorrect. Try again!');
+        }
   })
 
 let doctorElement = document.getElementById("doctor");
@@ -154,14 +154,28 @@ let quoteElement = document.getElementsByTagName('h3');
         alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
       if (counter<3 && counter>=2) {
-        alert('You picked Seven of Nine! You answered correctly on your 2nd try');  window.location.reload(true);
+        alert('You picked the Doctor! You answered correctly on your 2nd try');  window.location.reload(true);
       }
       if (counter<2 && counter>=1) {
         alert('You picked the Doctor! You answered correctly on 3rd try!');
         window.location.reload(true);
       }
-      } else {
+    } else {
         counter--
-        alert('You picked the Doctor, sorry, this was incorrect.')
+        alert('You picked the Doctor, sorry, this was incorrect. Try again!');
         }
     })
+
+    // else if (quoteElement[0].id !=='Janeway1'){
+    //       if (counter===3) {
+    //       counter--
+    //       alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining');
+    //       }
+    //       if (counter<3 && counter>=2) {
+    //         alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempts remaining');
+    //       }
+    //       if (counter<2 && counter>=1) {
+    //         alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining');
+    //         window.location.reload(true);
+    //       }
+    //     }

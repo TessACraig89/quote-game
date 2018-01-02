@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Star Trek Quote Matching Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
@@ -10,12 +11,15 @@
       <h1>Star Trek Quote Matching</h1>
     </header>
     <main>
+      <center>
       <h2 id='instructionsTitle'>Instructions
       </h2>
-      <p id='instructions'>Star Trek Quote Matching Game is a single player game in which the user is presented with 3 cards containing a character's image and name, and a quote. The user clicks on a characters image and is alerted whether or not they found a match. Once the round of cards are completely matched the user is presented with a score of how many matches they got correct on their first try.
+      <p id='instructions'>Star Trek Quote Matching Game is a single player game in which<br> the user is presented a quote and 3 cards containing a character's<br> image and name. The goal of the game is to match the<br> quote to the correct character in the least amount of tries.
       </p>
       <div id='game-board'>
       </div>
+      <p id='click'> click on the character that said the following
+      </p>
       <div class="card-text" id="quote"></div>
     </main>
     <footer class="clearfix">
@@ -25,6 +29,7 @@
       <br>
       <a class='linkedin' href="https://www.linkedin.com/in/tessashleycraig/">Linkedin</a>
     </footer>
+  </center>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"src="app.js"></script>
   </body>
