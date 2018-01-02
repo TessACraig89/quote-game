@@ -58,6 +58,7 @@ let characterCards = [
   // creates image element and stores in variable card
   // sets img src to be the cardImage url value
   //sets card image element's id to be the name value
+  // opens the modal window
   // get game board element by id and stores
   // card is appended to gameBoard
   for (let i = 0; i < characterCards.length; i++) {
@@ -264,80 +265,3 @@ let attemptsLeft = 3;
   //     from {opacity: 0;}
   //     to {opacity:1 ;}
   // }
-
-
-//
-
-/* <div id="modalInfo" class="modal fade" role="dialog">
-	  <div class="modal-dialog modal-md">
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header float-center">
-	        <h2>How to Play</h2>
-	      </div>
-	      <div class="modal-body text-left">
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal" default>Close</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div> */
-
-
-
-// var test1 = $('#test').val();
-//
-// $('#go').click(function() {
-//   if (test1 === "") {
-//     alert("Please enter all values in the fields");
-//     $('#myModal').modal('show');
-//   }
-//
-// });
-//
-// <div class="form-group">
-//   <label for="test" class="col-sm-3 control-label">Test</label>
-//   <div class="col-sm-3">
-//     <input type="text" class="form-control" id="test" placeholder="Enter A Value">
-//   </div>
-// </div>
-// <div class="form-group">
-//   <div class="col-sm-offset-6 col-sm-3">
-//     <button type="button" id="go" class="btn btn-primary">Go</button>
-//   </div>
-// </div>
-// <!--Modal-->
-// <div class="modal fade" id="#myModal">
-//   <div class="modal-dialog">
-//     <div class="modal-content">
-//       <div class="modal-header">
-//         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-//
-//         </button>
-//         <h4 class="modal-title">Modal title</h4>
-//
-//       </div>
-//       <div class="modal-body">
-//         <p>One fine body&hellip;</p>
-//       </div>
-//       <div class="modal-footer">
-//         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-//         <button type="button" class="btn btn-primary">Save changes</button>
-//       </div>
-//     </div>
-//     <!-- /.modal-content -->
-//   </div>
-//   <!-- /.modal-dialog -->
-// </div>
-// <!-- /.modal -->
-// <!--End Modal-->
-//
-// $('#go').click(function() {
-//   var test1 = $('#test').val();
-//
-//   if (test1 === "") {
-//     $('#\\#myModal').modal('show');
-//   }
-// });
