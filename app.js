@@ -2,39 +2,39 @@
 let quotes = [
   {
   quote: `"There is coffee in that nebula."`,
-  author: 'Janeway1'
+  character: 'Janeway1'
   },
   {
   quote: `"Oh, you know the story. Girl meets boy, girl reprograms boy's subroutines."`,
-  author: 'Janeway1'
+  character: 'Janeway1'
   },
   {
   quote: `"At ease before you sprain something."`,
-  author: 'Janeway1'
+  character: 'Janeway1'
   },
   {
   quote: `"I understand the concept of humor. It may not be apparent but I am often amused by human behavior."`,
-  author: 'Seven2'
+  character: 'Seven2'
   },
   {
   quote: `"Your appeal to my humanity is pointless."`,
-  author:'Seven2'
+  character:'Seven2'
   },
   {
   quote: `"Fun will now commence."`,
-  author:'Seven2'
+  character:'Seven2'
   },
   {
   quote: `"I'll complain if I want to. It's comforting."`,
-  author: 'Doctor3'
+  character: 'Doctor3'
   },
   {
   quote: `"You should know I'm a hologram and can't be bent, spindled, or mutilated, so don't bother trying."`,
-  author: 'Doctor3'
+  character: 'Doctor3'
   },
   {
   quote: `"The Borg: party-poopers of the galaxy."`,
-  author: 'Doctor3'
+  character: 'Doctor3'
   }
 ]
 
@@ -78,12 +78,16 @@ for (let i = 0; i < characterCards.length; i++) {
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
 
-let elem2 = document.createElement('h3');
+let elementFunction = () => {
+  let elem2 = document.createElement('h3');
   let source = quotes[Math.floor(Math.random()*quotes.length)];
-  elem2.id = source.author;
+  elem2.id = source.character;
   elem2.innerHTML = source.quote
   let quote = document.getElementById('quote');
   quote.append(elem2)
+}
+
+elementFunction();
 
 //sets counter starter position to 3
 let counter = 3;
@@ -110,14 +114,14 @@ janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
       if (counter===3){
-        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
+        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');   window.location.reload(true);
       }
       if (counter<3 && counter>=2){
         alert('You picked Captain Janeway! You answered correctly on your second try!');
         window.location.reload(true);
       }
       if (counter<2 && counter>=1){
-        alert('You picked Captain Janeway! You answered correctly on 3rd try!');  window.location.reload(true);
+        alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
       }
     } else {
           counter--
@@ -130,14 +134,15 @@ sevenElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
   if (quoteElement[0].id==='Seven2') {
     if (counter===3){
-      alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
+      alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
+      window.location.reload(true);
     }
     if (counter<3 && counter>=2){
-      alert('You picked Seven of Nine! You answered correctly on your 2nd try');
+      alert('You picked Seven of Nine! You answered correctly on your second try!');
       window.location.reload(true);
     }
     if (counter<2 && counter>=1){
-      alert('You picked Seven of Nine! You answered correctly on 3rd try!');
+      alert('You picked Seven of Nine! You answered correctly on third try!');
       window.location.reload(true);
     }
   } else {
@@ -154,10 +159,11 @@ let quoteElement = document.getElementsByTagName('h3');
         alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
       if (counter<3 && counter>=2) {
-        alert('You picked the Doctor! You answered correctly on your 2nd try');  window.location.reload(true);
+        alert('You picked the Doctor! You answered correctly on your second try!');
+        window.location.reload(true);
       }
       if (counter<2 && counter>=1) {
-        alert('You picked the Doctor! You answered correctly on 3rd try!');
+        alert('You picked the Doctor! You answered correctly on third try!');
         window.location.reload(true);
       }
     } else {
@@ -166,6 +172,8 @@ let quoteElement = document.getElementsByTagName('h3');
         }
     })
 
+
+// WIP
     // else if (quoteElement[0].id !=='Janeway1'){
     //       if (counter===3) {
     //       counter--
@@ -179,3 +187,9 @@ let quoteElement = document.getElementsByTagName('h3');
     //         window.location.reload(true);
     //       }
     //     }
+
+    // let removeFunction = () => {
+    //     // Removes an element from the document
+    //     var element = document.getElementByTag(elem2);
+    //     quote.parentNode.removeChild(element);
+    //   }

@@ -1,15 +1,14 @@
-@font-face {
-  font-family: "main";
-  src: url("fonts/Ba.TTF");
-}
-
-
 body {
-  background-image: url("images/star_trek_background.jpg");
+  background-image: url("images/star_trek.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   color: white;
+}
+
+@font-face {
+  font-family: "main";
+  src: url("fonts/Ba.TTF");
 }
 
 h1 {
@@ -27,7 +26,7 @@ h2 {
   font-size: 30px;
   padding-top: 30px;
   padding-bottom: 10px;
-  border-bottom: 5px solid #2C9B87;
+  border-bottom: 5px solid #19565A;
   border-radius: 15px;
   display: inline;
   position: absolute;
@@ -70,6 +69,7 @@ img {
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
   position: relative;
+  top: 30px;
 }
 
 h3 {
@@ -80,7 +80,7 @@ h3 {
   background-color: black;
   display: inline-block;
   padding: 20px;
-  border: 3px solid #2C9B87;
+  border: 3px solid #19565A;
   border-radius: 20px;
   font-style: italic;
   position: relative;
@@ -135,5 +135,5 @@ footer {
 }
 
 a:hover {
-    background-color: #2C9B87;
+    background-color: #19565A;
 }
