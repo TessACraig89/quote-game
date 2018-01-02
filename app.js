@@ -106,18 +106,17 @@ let attemptsLeft = 3;
     //alert
 
 let janewayElement = document.getElementById("janeway");
-janewayElement.addEventListener("click",function(event){
-event.preventDefault();
+janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
       if (attemptsLeft===3){
         alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!'); window.location.reload(true);
       }
-      if (attemptsLeft<3 && attemptsLeft>=2){
+      if (attemptsLeft===2){
         alert('You picked Captain Janeway! You answered correctly on your second try!');
         window.location.reload(true);
       }
-      if (attemptsLeft<2 && attemptsLeft>=1){
+      if (attemptsLeft===1){
         alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
       }
     } else {
@@ -136,11 +135,11 @@ let quoteElement = document.getElementsByTagName('h3');
       alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
       window.location.reload(true);
     }
-    if (attemptsLeft<3 && attemptsLeft>=2){
+    if (attemptsLeft===2){
       alert('You picked Seven of Nine! You answered correctly on your second try!');
       window.location.reload(true);
     }
-    if (attemptsLeft<2 && attemptsLeft>=1){
+    if (attemptsLeft===1){
       alert('You picked Seven of Nine! You answered correctly on third try!');
       window.location.reload(true);
     }
@@ -157,11 +156,11 @@ let quoteElement = document.getElementsByTagName('h3');
       if (attemptsLeft===3) {
         alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
-      if (attemptsLeft<3 && attemptsLeft>=2) {
+      if (attemptsLeft===2) {
         alert('You picked the Doctor! You answered correctly on your second try!');
         window.location.reload(true);
       }
-      if (attemptsLeft<2 && attemptsLeft>=1) {
+      if (attemptsLeft===1) {
         alert('You picked the Doctor! You answered correctly on third try!');
         window.location.reload(true);
       }

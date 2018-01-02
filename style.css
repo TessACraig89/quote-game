@@ -29,8 +29,9 @@ h2 {
   border-bottom: 5px solid #19565A;
   border-radius: 15px;
   display: inline;
-  position: absolute;
-  right: 535px;
+  position: relative;
+  left: 475px;
+  bottom: 70px;
 }
 
 #instructions {
@@ -43,6 +44,7 @@ h2 {
   display: inline-block;
   border: 5px solid black;
   border-radius: 50px;
+  right: 80px;
 }
 
 img {
