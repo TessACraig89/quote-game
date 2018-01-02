@@ -78,25 +78,24 @@ for (let i = 0; i < characterCards.length; i++) {
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
 
-let elementFunction = () => {
   let elem2 = document.createElement('h3');
   let source = quotes[Math.floor(Math.random()*quotes.length)];
   elem2.id = source.character;
   elem2.innerHTML = source.quote
   let quote = document.getElementById('quote');
   quote.append(elem2)
-}
 
-elementFunction();
 
-//sets counter starter position to 3
-let counter = 3;
+
+
+//sets attemptsLeft starter position to 3
+let attemptsLeft = 3;
 
 // gets janeway element, that was created using for loop, and sets as janewayElement
 // adds click event to janewayElement that triggers function
 // gets h3 element, that was created and stored as elem2, containing character id and quote and stores as quoteElement
   //if character id is Janeway1
-    //if first attempt, counter===3
+    //if first attempt, attemptsLeft===3
       //alert
       //reload window
     //if second attempt
@@ -106,47 +105,53 @@ let counter = 3;
       //alert
       //reload window
   //else
-    //decrement counter
+    //decrement attemptsLeft
     //alert
 
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
-      if (counter===3){
-        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');   window.location.reload(true);
+      if (attemptsLeft===3){
+        correctPopup(); window.location.reload(true);
       }
-      if (counter<3 && counter>=2){
+      if (attemptsLeft<3 && attemptsLeft>=2){
         alert('You picked Captain Janeway! You answered correctly on your second try!');
         window.location.reload(true);
       }
-      if (counter<2 && counter>=1){
+      if (attemptsLeft<2 && attemptsLeft>=1){
         alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
       }
     } else {
-          counter--
+          attemptsLeft--
           alert('You picked the Janeway, sorry, this was incorrect. Try again!');
           }
     })
+
+    // When the user clicks on <div>, open the popup
+let correctPopup = () => {
+    let popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
 
 let sevenElement = document.getElementById("seven");
 sevenElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
   if (quoteElement[0].id==='Seven2') {
-    if (counter===3){
+    if (attemptsLeft===3){
       alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
       window.location.reload(true);
     }
-    if (counter<3 && counter>=2){
+    if (attemptsLeft<3 && attemptsLeft>=2){
       alert('You picked Seven of Nine! You answered correctly on your second try!');
       window.location.reload(true);
     }
-    if (counter<2 && counter>=1){
+    if (attemptsLeft<2 && attemptsLeft>=1){
       alert('You picked Seven of Nine! You answered correctly on third try!');
       window.location.reload(true);
     }
   } else {
-        counter--
+        attemptsLeft--
         alert('You picked the Seven of Nine, sorry, this was incorrect. Try again!');
         }
   })
@@ -155,36 +160,39 @@ let doctorElement = document.getElementById("doctor");
 doctorElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Doctor3') {
-      if (counter===3) {
+      if (attemptsLeft===3) {
         alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
       }
-      if (counter<3 && counter>=2) {
+      if (attemptsLeft<3 && attemptsLeft>=2) {
         alert('You picked the Doctor! You answered correctly on your second try!');
         window.location.reload(true);
       }
-      if (counter<2 && counter>=1) {
+      if (attemptsLeft<2 && attemptsLeft>=1) {
         alert('You picked the Doctor! You answered correctly on third try!');
         window.location.reload(true);
       }
     } else {
-        counter--
+        attemptsLeft--
         alert('You picked the Doctor, sorry, this was incorrect. Try again!');
         }
     })
+
+
+
 
 
 // WIP
 
 // number of remaining attempts alerts
     // else if (quoteElement[0].id !=='Janeway1'){
-    //       if (counter===3) {
-    //       counter--
+    //       if (attemptsLeft===3) {
+    //       attemptsLeft--
     //       alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining');
     //       }
-    //       if (counter<3 && counter>=2) {
+    //       if (attemptsLeft<3 && attemptsLeft>=2) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempts remaining');
     //       }
-    //       if (counter<2 && counter>=1) {
+    //       if (attemptsLeft<2 && attemptsLeft>=1) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining');
     //         window.location.reload(true);
     //       }
