@@ -78,58 +78,25 @@ for (let i = 0; i < characterCards.length; i++) {
   // sets quoteInnerHTML html content to be the quote
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
+let quoteInnerHTML
 
-  let quoteInnerHTML = document.createElement('h3');
-  let source = quotes[Math.floor(Math.random()*quotes.length)];
-  quoteInnerHTML.id = source.character;
-  quoteInnerHTML.innerHTML = source.quote
-  let quote = document.getElementById('quote');
-  quote.append(quoteInnerHTML)
+let appendQuote = () => {
+    quoteInnerHTML = document.createElement('h3');
+    let source = quotes[Math.floor(Math.random()*quotes.length)];
+    quoteInnerHTML.id = source.character;
+    quoteInnerHTML.innerHTML = source.quote
+    let quote = document.getElementById('quote');
+    quote.append(quoteInnerHTML);
+}
+appendQuote();
 
 //sets attemptsLeft starter position to 3
 let attemptsLeft = 3;
 
+let removeQuote = () => {
+   quote.removeChild(quoteInnerHTML)
+}
 
-//WIP custom alert
-// function CustomAlert () {
-//   this.render = function(dialog) {
-//     let windowWidth = window.innerWidth;
-//     let windowHeight = window.innerHeight;
-//     let dialogoverlay = document.getElementById('dialogoverlay');
-//     let dialogbox = document.getElementById('dialogbox');
-//     dialogoverlay.style.display = "block";
-//     dialogoverlay.style.height = windowHeight + "px";
-//     dialogbox.style.left = (windowWidth/2) - (550 * .5) + "px";
-//     dialogbox.style.top = "100px";
-//     dialogbox.style.display = "block";
-//     document.getElementById('dialogboxhead').innerHTML = "How'd you do";
-//     document.getElementById('dialogboxbody').innerHTML = dialog;
-//     document.getElementById('dialogboxfoot').innerHTML = '<button onclick= "customAlert.ok()">Ok</button>';
-//   }
-//   this.ok = function() {
-//     document.getElementById('dialogbox').style.display = "none";
-//     document.getElementById('dialogoverlay').style.display = "none";
-//   }
-// }
-//
-// let customAlert = new CustomAlert();
-
-// gets janeway element, that was created using for loop, and sets as janewayElement
-// adds click event to janewayElement that triggers function
-// gets h3 element, that was created and stored as quoteInnerHTML, containing character id and quote and stores as quoteElement
-  //if character id is Janeway1
-    //if first attempt, attemptsLeft===3
-      //alert
-      //reload window
-    //if second attempt
-      //alert
-      //reload window
-    //if 3rd attempt
-      //alert
-      //reload window
-  //else
-    //decrement attemptsLeft
-    //alert
 
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
@@ -138,14 +105,18 @@ let quoteElement = document.getElementsByTagName('h3');
       if (attemptsLeft===3){
         alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
         // customAlert.render('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
-        window.location.reload(true);
+        removeQuote();
+        appendQuote()
       }
       if (attemptsLeft===2){
         alert('You picked Captain Janeway! You answered correctly on your second try!');
-        window.location.reload(true);
+        removeQuote();
+        appendQuote();
       }
       if (attemptsLeft===1){
-        alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
+        alert('You picked Captain Janeway! You answered correctly on third try!');
+        removeQuote();
+        appendQuote();
       }
     } else {
           attemptsLeft--
@@ -161,15 +132,18 @@ let quoteElement = document.getElementsByTagName('h3');
   if (quoteElement[0].id==='Seven2') {
     if (attemptsLeft===3){
       alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
-      window.location.reload(true);
+      removeQuote();
+      appendQuote()
     }
     if (attemptsLeft===2){
       alert('You picked Seven of Nine! You answered correctly on your second try!');
-      window.location.reload(true);
+      removeQuote();
+      appendQuote()
     }
     if (attemptsLeft===1){
       alert('You picked Seven of Nine! You answered correctly on third try!');
-      window.location.reload(true);
+      removeQuote();
+      appendQuote()
     }
   } else {
         attemptsLeft--
@@ -182,15 +156,19 @@ doctorElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Doctor3') {
       if (attemptsLeft===3) {
-        alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
+        alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');
+        removeQuote();
+        appendQuote();
       }
       if (attemptsLeft===2) {
         alert('You picked the Doctor! You answered correctly on your second try!');
-        window.location.reload(true);
+        removeQuote();
+        appendQuote();
       }
       if (attemptsLeft===1) {
         alert('You picked the Doctor! You answered correctly on third try!');
-        window.location.reload(true);
+        removeQuote();
+        appendQuote();
       }
     } else {
         attemptsLeft--
@@ -219,11 +197,32 @@ let quoteElement = document.getElementsByTagName('h3');
     //       }
     //     }
 
-// remove quoteInnerHTML instead of reload
-    // let removeFunction = () => {
-    //     let element = document.getElementsByTagName('h3');
-    //     quote.parentNode.removeChild(element);
+    //WIP custom alert
+    // function CustomAlert () {
+    //   this.render = function(dialog) {
+    //     let windowWidth = window.innerWidth;
+    //     let windowHeight = window.innerHeight;
+    //     let dialogoverlay = document.getElementById('dialogoverlay');
+    //     let dialogbox = document.getElementById('dialogbox');
+    //     dialogoverlay.style.display = "block";
+    //     dialogoverlay.style.height = windowHeight + "px";
+    //     dialogbox.style.left = (windowWidth/2) - (550 * .5) + "px";
+    //     dialogbox.style.top = "100px";
+    //     dialogbox.style.display = "block";
+    //     document.getElementById('dialogboxhead').innerHTML = "How'd you do";
+    //     document.getElementById('dialogboxbody').innerHTML = dialog;
+    //     document.getElementById('dialogboxfoot').innerHTML = '<button onclick= "customAlert.ok()">Ok</button>';
     //   }
+    //   this.ok = function() {
+    //     document.getElementById('dialogbox').style.display = "none";
+    //     document.getElementById('dialogoverlay').style.display = "none";
+    //   }
+    // }
+    //
+    // let customAlert = new CustomAlert();
+
+// remove quoteInnerHTML instead of reload
+
 
 //popup function
 // let correctPopup = () => {
