@@ -85,9 +85,6 @@ for (let i = 0; i < characterCards.length; i++) {
   let quote = document.getElementById('quote');
   quote.append(quoteInnerHTML)
 
-
-
-
 //sets attemptsLeft starter position to 3
 let attemptsLeft = 3;
 
@@ -109,7 +106,8 @@ let attemptsLeft = 3;
     //alert
 
 let janewayElement = document.getElementById("janeway");
-janewayElement.addEventListener("click",function(){
+janewayElement.addEventListener("click",function(event){
+event.preventDefault();
 let quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
       if (attemptsLeft===3){
@@ -124,7 +122,7 @@ let quoteElement = document.getElementsByTagName('h3');
       }
     } else {
           attemptsLeft--
-          alert('You picked the Janeway, sorry, this was incorrect. Try again!');
+          alert('You picked the Janeway, sorry, this was incorrect.Try again!');
           }
     })
 
@@ -263,3 +261,25 @@ let quoteElement = document.getElementsByTagName('h3');
 
 
 //
+
+{/* <div id="modalInfo" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-md">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header float-center">
+	        <h2>How to Play</h2>
+	      </div>
+	      <div class="modal-body text-left">
+	        <ul>
+	        	<li>Using keyboard, enter your guesses and press enter.</li>
+	        	<li>Press <i>Twist</i> button to scramble the order of letters.</li>
+	        	<li>Press <i>Reset</i> button to start another game.</li>
+	        </ul>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" default>Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div> */}
