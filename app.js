@@ -73,17 +73,17 @@ for (let i = 0; i < characterCards.length; i++) {
       // math.floor is used to get the nearest rounded down whole number to make sure result isnt out of index range
       //Math.random returns a random number between greater than or equal to 0 and less than 1
       //*quotes.length is made because 1+high-low is 1 + quotes.length - 1
-  // sets elem2 id to the character's name
-  // sets elem2 html content to be the quote
+  // sets quoteInnerHTML id to the character's name
+  // sets quoteInnerHTML html content to be the quote
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
 
-  let elem2 = document.createElement('h3');
+  let quoteInnerHTML = document.createElement('h3');
   let source = quotes[Math.floor(Math.random()*quotes.length)];
-  elem2.id = source.character;
-  elem2.innerHTML = source.quote
+  quoteInnerHTML.id = source.character;
+  quoteInnerHTML.innerHTML = source.quote
   let quote = document.getElementById('quote');
-  quote.append(elem2)
+  quote.append(quoteInnerHTML)
 
 
 
@@ -93,7 +93,7 @@ let attemptsLeft = 3;
 
 // gets janeway element, that was created using for loop, and sets as janewayElement
 // adds click event to janewayElement that triggers function
-// gets h3 element, that was created and stored as elem2, containing character id and quote and stores as quoteElement
+// gets h3 element, that was created and stored as quoteInnerHTML, containing character id and quote and stores as quoteElement
   //if character id is Janeway1
     //if first attempt, attemptsLeft===3
       //alert
@@ -194,9 +194,8 @@ let quoteElement = document.getElementsByTagName('h3');
     //       }
     //     }
 
-// remove elem2 instead of reload
+// remove quoteInnerHTML instead of reload
     // let removeFunction = () => {
-    //     // Removes an element from the document
     //     let element = document.getElementsByTagName('h3');
     //     quote.parentNode.removeChild(element);
     //   }
@@ -261,3 +260,6 @@ let quoteElement = document.getElementsByTagName('h3');
   //     from {opacity: 0;}
   //     to {opacity:1 ;}
   // }
+
+
+//
