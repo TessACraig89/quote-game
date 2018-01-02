@@ -174,6 +174,8 @@ let quoteElement = document.getElementsByTagName('h3');
 
 
 // WIP
+
+// number of remaining attempts alerts
     // else if (quoteElement[0].id !=='Janeway1'){
     //       if (counter===3) {
     //       counter--
@@ -188,8 +190,11 @@ let quoteElement = document.getElementsByTagName('h3');
     //       }
     //     }
 
+// remove elem2 instead of reload
     // let removeFunction = () => {
     //     // Removes an element from the document
-    //     var element = document.getElementByTag(elem2);
+    //     let element = document.getElementsByTagName('h3');
     //     quote.parentNode.removeChild(element);
     //   }
+
+  //
