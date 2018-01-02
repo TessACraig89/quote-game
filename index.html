@@ -4,10 +4,6 @@
     <meta charset="utf-8">
     <title>Star Trek Quote Matching Game</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
@@ -16,6 +12,14 @@
     </header>
     <main>
       <center>
+        <!-- WIP custom alert -->
+      <!-- <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+          <div id="dialogboxhead"></div>
+          <div id="dialogboxbody"></div>
+          <div id="dialogboxfoot"></div>
+      </div> -->
       <h2 id='instructionsTitle'>Instructions
       </h2>
       <p id='instructions'>Star Trek Quote Matching Game is a single player game in which<br> the user is presented a quote and 3 cards containing a character's<br> image and name. The goal of the game is to match the<br> quote to the correct character in the least amount of tries.
@@ -26,23 +30,6 @@
       </p>
       <div class="card-text" id="quote"></div>
     </main>
-    <div id="modalMessage" class="modal fade" role="dialog">
-      <div class="modal-dialog modal-md">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            Modal header here
-          </div>
-          <div class="modal-body" id="message">
-            Modal triggered!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
     <footer class="clearfix">
       <a class='github' href="https://github.com/TessACraig89">GitHub</a>
       <br>
@@ -51,6 +38,7 @@
       <a class='linkedin' href="https://www.linkedin.com/in/tessashleycraig/">Linkedin</a>
     </footer>
   </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"src="app.js"></script>
   </body>
 </html>

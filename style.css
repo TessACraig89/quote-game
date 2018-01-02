@@ -11,6 +11,30 @@ body {
   src: url("fonts/Ba.TTF");
 }
 
+/* #dialogoverlay {
+  display: none;
+  opacity: .8;
+  background-color: red;
+  z-index: 10px;
+}
+
+#dialogbox {
+  display: none;
+  position: fixed;
+  background-color: black;
+  color: white;
+  font: 20px;
+  z-index: 10px;
+}
+
+#dialogboxhead {
+
+}
+
+#dialogboxbody {
+
+} */
+
 h1 {
   position: relative;
   font-family: "main";

@@ -1,4 +1,5 @@
 //quotes array
+
 let quotes = [
   {
   quote: `"There is coffee in that nebula."`,
@@ -58,18 +59,15 @@ let characterCards = [
   // creates image element and stores in variable card
   // sets img src to be the cardImage url value
   //sets card image element's id to be the name value
-  // opens the modal window
   // get game board element by id and stores
   // card is appended to gameBoard
-  for (let i = 0; i < characterCards.length; i++) {
-    let card = document.createElement("img");
-    card.src = characterCards[i].cardImage;
-    card.id = characterCards[i].name;
-    card.setAttribute("data-toggle", "modal");
-    card.setAttribute("data-target", "#modalMessage");
-    let gameBoard = document.getElementById('game-board');
-    gameBoard.append(card)
-  }
+for (let i = 0; i < characterCards.length; i++) {
+  let card = document.createElement("img");
+  card.src = characterCards[i].cardImage;
+  card.id = characterCards[i].name;
+  let gameBoard = document.getElementById('game-board');
+  gameBoard.append(card)
+}
 
 // creates h3 element
   //Math.floor(Math.random()*quotes.length) chooses a random index from the quotes array and stores as source
@@ -91,6 +89,31 @@ let characterCards = [
 //sets attemptsLeft starter position to 3
 let attemptsLeft = 3;
 
+
+//WIP custom alert
+// function CustomAlert () {
+//   this.render = function(dialog) {
+//     let windowWidth = window.innerWidth;
+//     let windowHeight = window.innerHeight;
+//     let dialogoverlay = document.getElementById('dialogoverlay');
+//     let dialogbox = document.getElementById('dialogbox');
+//     dialogoverlay.style.display = "block";
+//     dialogoverlay.style.height = windowHeight + "px";
+//     dialogbox.style.left = (windowWidth/2) - (550 * .5) + "px";
+//     dialogbox.style.top = "100px";
+//     dialogbox.style.display = "block";
+//     document.getElementById('dialogboxhead').innerHTML = "How'd you do";
+//     document.getElementById('dialogboxbody').innerHTML = dialog;
+//     document.getElementById('dialogboxfoot').innerHTML = '<button onclick= "customAlert.ok()">Ok</button>';
+//   }
+//   this.ok = function() {
+//     document.getElementById('dialogbox').style.display = "none";
+//     document.getElementById('dialogoverlay').style.display = "none";
+//   }
+// }
+//
+// let customAlert = new CustomAlert();
+
 // gets janeway element, that was created using for loop, and sets as janewayElement
 // adds click event to janewayElement that triggers function
 // gets h3 element, that was created and stored as quoteInnerHTML, containing character id and quote and stores as quoteElement
@@ -107,77 +130,74 @@ let attemptsLeft = 3;
   //else
     //decrement attemptsLeft
     //alert
-    let janewayElement = document.getElementById("janeway");
-    janewayElement.setAttribute("data-toggle", "modal");
-    janewayElement.setAttribute("data-target", "#modalMessage");
-    // janewayElement.addEventListener("click",function(){
-    //   let quoteElement = document.getElementsByTagName('h3');
-    //   if (quoteElement[0].id === 'Janeway1') {
-    //     if (attemptsLeft === 3){
-    //       // alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<3 && attemptsLeft>=2){
-    //       // alert('You picked Captain Janeway! You answered correctly on your second try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<2 && attemptsLeft>=1){
-    //       $('#modalMessage').modal({show: true});
-    //       // alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
-    //     }
-    //   } else {
-    //     attemptsLeft--
-    //     alert('You picked the Janeway, sorry, this was incorrect.Try again!');
-    //   }
-    // })
+
+let janewayElement = document.getElementById("janeway");
+janewayElement.addEventListener("click",function(){
+let quoteElement = document.getElementsByTagName('h3');
+    if (quoteElement[0].id==='Janeway1') {
+      if (attemptsLeft===3){
+        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
+        // customAlert.render('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
+        window.location.reload(true);
+      }
+      if (attemptsLeft===2){
+        alert('You picked Captain Janeway! You answered correctly on your second try!');
+        window.location.reload(true);
+      }
+      if (attemptsLeft===1){
+        alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
+      }
+    } else {
+          attemptsLeft--
+          alert('You picked the Janeway, sorry, this was incorrect.Try again!');
+          }
+    })
 
 
-    // let sevenElement = document.getElementById("seven");
-    // sevenElement.setAttribute("data-toggle", "modal");
-    // sevenElement.setAttribute("data-target", "#modalMessage");
-    // janewayElement.addEventListener("click",function(){
-    //   let quoteElement = document.getElementsByTagName('h3');
-    //   if (quoteElement[0].id === 'Janeway1') {
-    //     if (attemptsLeft === 3){
-    //       // alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<3 && attemptsLeft>=2){
-    //       // alert('You picked Captain Janeway! You answered correctly on your second try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<2 && attemptsLeft>=1){
-    //       $('#modalMessage').modal({show: true});
-    //       // alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
-    //     }
-    //   } else {
-    //     attemptsLeft--
-    //     alert('You picked the Janeway, sorry, this was incorrect.Try again!');
-    //   }
-    // })
-    // let doctorElement = document.getElementById("doctor");
-    // doctorElement.setAttribute("data-toggle", "modal");
-    // doctorElement.setAttribute("data-target", "#modalMessage");
-    // janewayElement.addEventListener("click",function(){
-    //   let quoteElement = document.getElementsByTagName('h3');
-    //   if (quoteElement[0].id === 'Janeway1') {
-    //     if (attemptsLeft === 3){
-    //       // alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<3 && attemptsLeft>=2){
-    //       // alert('You picked Captain Janeway! You answered correctly on your second try!');
-    //       window.location.reload(true);
-    //     }
-    //     if (attemptsLeft<2 && attemptsLeft>=1){
-    //       $('#modalMessage').modal({show: true});
-    //       // alert('You picked Captain Janeway! You answered correctly on third try!');  window.location.reload(true);
-    //     }
-    //   } else {
-    //     attemptsLeft--
-    //     alert('You picked the Janeway, sorry, this was incorrect.Try again!');
-    //   }
-    // })
+
+let sevenElement = document.getElementById("seven");
+sevenElement.addEventListener("click",function(){
+let quoteElement = document.getElementsByTagName('h3');
+  if (quoteElement[0].id==='Seven2') {
+    if (attemptsLeft===3){
+      alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
+      window.location.reload(true);
+    }
+    if (attemptsLeft===2){
+      alert('You picked Seven of Nine! You answered correctly on your second try!');
+      window.location.reload(true);
+    }
+    if (attemptsLeft===1){
+      alert('You picked Seven of Nine! You answered correctly on third try!');
+      window.location.reload(true);
+    }
+  } else {
+        attemptsLeft--
+        alert('You picked the Seven of Nine, sorry, this was incorrect. Try again!');
+        }
+  })
+
+let doctorElement = document.getElementById("doctor");
+doctorElement.addEventListener("click",function(){
+let quoteElement = document.getElementsByTagName('h3');
+    if (quoteElement[0].id==='Doctor3') {
+      if (attemptsLeft===3) {
+        alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');  window.location.reload(true);
+      }
+      if (attemptsLeft===2) {
+        alert('You picked the Doctor! You answered correctly on your second try!');
+        window.location.reload(true);
+      }
+      if (attemptsLeft===1) {
+        alert('You picked the Doctor! You answered correctly on third try!');
+        window.location.reload(true);
+      }
+    } else {
+        attemptsLeft--
+        alert('You picked the Doctor, sorry, this was incorrect. Try again!');
+        }
+    })
+
 
 
 
@@ -190,10 +210,10 @@ let attemptsLeft = 3;
     //       attemptsLeft--
     //       alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining');
     //       }
-    //       if (attemptsLeft===2) {
+    //       if (attemptsLeft<3 && attemptsLeft>=2) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempts remaining');
     //       }
-    //       if (attemptsLeft===1) {
+    //       if (attemptsLeft<2 && attemptsLeft>=1) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining');
     //         window.location.reload(true);
     //       }
@@ -265,3 +285,23 @@ let attemptsLeft = 3;
   //     from {opacity: 0;}
   //     to {opacity:1 ;}
   // }
+
+
+//
+
+/* <div id="modalInfo" class="modal fade" role="dialog">
+	  <div class="modal-dialog modal-md">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header float-center">
+	        <h2>How to Play</h2>
+	      </div>
+	      <div class="modal-body text-left">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" default>Close</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div> */
