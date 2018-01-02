@@ -69,6 +69,9 @@ for (let i = 0; i < characterCards.length; i++) {
   gameBoard.append(card)
 }
 
+//creates quoteInnerHTML variable
+let quoteInnerHTML
+
 // creates h3 element
   //Math.floor(Math.random()*quotes.length) chooses a random index from the quotes array and stores as source
       // math.floor is used to get the nearest rounded down whole number to make sure result isnt out of index range
@@ -78,7 +81,6 @@ for (let i = 0; i < characterCards.length; i++) {
   // sets quoteInnerHTML html content to be the quote
   // gets quote element from document and stores as quote variable
   // elem 2 inner html, quote, is appended to the quote element
-let quoteInnerHTML
 
 let appendQuote = () => {
     quoteInnerHTML = document.createElement('h3');
@@ -93,11 +95,12 @@ appendQuote();
 //sets attemptsLeft starter position to 3
 let attemptsLeft = 3;
 
+// removes quoteInnerHTML from quote element which removes the quote from the page
 let removeQuote = () => {
    quote.removeChild(quoteInnerHTML)
 }
 
-
+//
 let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
