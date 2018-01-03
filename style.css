@@ -77,6 +77,8 @@ img {
   border: 5px solid black;
   margin: 70px 50px;
   top: 50px;
+  width: 220;
+  height: 316;
 }
 
 #click {
@@ -90,7 +92,7 @@ img {
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
   position: relative;
-  top: 30px;
+  top: 0px;
 }
 
 #quote {
@@ -100,12 +102,12 @@ img {
   margin: 100px;
   background-color: black;
   display: inline-block;
-  padding: 20px;
+  padding: 5px;
   border: 3px solid #19565A;
   border-radius: 20px;
   font-style: italic;
   position: relative;
-  bottom: 20px;
+  bottom: 65px;
 }
 
 footer {
