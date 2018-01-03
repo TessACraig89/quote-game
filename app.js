@@ -138,14 +138,13 @@ let quoteElement
   // sets earlier created quoteElement variable to be the h3 element  which is the container of the quoteInnerHTML quote and id
       // if id is correct character name
           // and current count is 1
-              //alert that correct on first try
+              //alertify correct, on what try
               //call removeQuote
               //call appendQuote
               //set current count back to 0 for next round
-      //repeat for correct when current count is 2 and 3
       // if id is not correct
           // and current count is 1
-              //alert 2 tries left
+              //alertify incorrect, tries left
           // repeat for current count as 2
           //if current count is 0
               //alert no tries remaining
@@ -157,23 +156,19 @@ janewayElement.addEventListener("click", function() {
     quoteElement = document.getElementsByTagName('h3');
         if (quoteElement[0].id==='Janeway1') {
             if (count===1) {
-                // alertify.alert("Correct", quoteElement[0].id).show();
                 alertify.alert("Correct Match", 'You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
-                // alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count===2) {
                 alertify.alert("Correct Match", 'You picked Captain Janeway! You answered correctly on your second try!');
-                // alert('You picked Captain Janeway! You answered correctly on your second try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count===3) {
                 alertify.alert("Correct Match", 'You picked Captain Janeway! You answered correctly on third try!');
-                // alert('You picked Captain Janeway! You answered correctly on third try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
@@ -181,14 +176,13 @@ janewayElement.addEventListener("click", function() {
         } else if (quoteElement[0].id !=='Janeway1') {
             if (count===1) {
                 alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining!');
-                // alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining!');
+
             }
             if (count===2) {
                 alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 1 attempt remaining!');
             }
             if (count===3) {
                 alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining!');
-                // alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
                 removeQuote();
                 appendQuote();
                 count = 0;
@@ -205,21 +199,18 @@ sevenElement.addEventListener("click", function() {
         if (quoteElement[0].id==='Seven2') {
             if (count===1){
                 alertify.alert("Correct Match", 'You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
-                // alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count===2){
                 alertify.alert("Correct Match", 'You picked Seven of Nine! You answered correctly on your second try!');
-                // alert('You picked Seven of Nine! You answered correctly on your second try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count===3){
                 alertify.alert("Correct Match", 'You picked Seven of Nine! You answered correctly on third try!');
-                // alert('You picked Seven of Nine! You answered correctly on third try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
@@ -227,15 +218,14 @@ sevenElement.addEventListener("click", function() {
         } else if (quoteElement[0].id !=='Seven2') {
             if (count===1) {
                 alertify.alert("Incorrect Match", 'You picked the Seven of Nine, sorry, this was incorrect. You have 2 attempts remaining!');
-                // alert('You picked the Seven of Nine, sorry, this was incorrect. You have 2 attempts remaining!');
+
             }
             if (count===2) {
                 alertify.alert("Incorrect Match", 'You picked the Seven of Nine, sorry, this was incorrect. You have 1 attempt remaining!');
-                // alert('You picked the Seven of Nine, sorry, this was incorrect. You have 1 attempt remaining!');
+
             }
             if (count===3) {
                 alertify.alert("Incorrect Match", 'You picked the Seven of Nine, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
-                // alert('You picked the Seven of Nine, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
                 removeQuote();
                 appendQuote();
                 count = 0;
@@ -250,21 +240,18 @@ doctorElement.addEventListener("click", function() {
         if (quoteElement[0].id ==='Doctor3') {
             if (count === 1) {
                 alertify.alert("Correct Match", 'You picked the Doctor! Congratulations, you matched correctly on your first try!');
-                // alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count === 2) {
                 alertify.alert("Correct Match", 'You picked the Doctor! You answered correctly on your second try!');
-                // alert('You picked the Doctor! You answered correctly on your second try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
             }
             if (count === 3) {
                 alertify.alert("Correct Match", 'You picked the Doctor! You answered correctly on third try!');
-                // alert('You picked the Doctor! You answered correctly on third try!');
                 removeQuote();
                 appendQuote();
                 count = 0;
@@ -272,15 +259,14 @@ doctorElement.addEventListener("click", function() {
         } else if (quoteElement[0].id !=='Doctor3') {
             if (count===1) {
                 alertify.alert("Incorrect Match", 'You picked the Doctor, sorry, this was incorrect. You have 2 attempts remaining!');
-                // alert('You picked the Doctor, sorry, this was incorrect. You have 2 attempts remaining!');
+
             }
             if (count===2) {
                 alertify.alert("Incorrect Match", 'You picked the Doctor, sorry, this was incorrect. You have 1 attempt remaining!');
-                // alert('You picked the Doctor, sorry, this was incorrect. You have 1 attempt remaining!');
+
             }
             if (count===3) {
                 alertify.alert("Incorrect Match", 'You picked the Doctor, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
-                // alert('You picked the Doctor, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
                 removeQuote();
                 appendQuote();
                 count = 0;
