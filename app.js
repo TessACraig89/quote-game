@@ -1,14 +1,3 @@
-
-// //get the closable setting value.
-// let closable = alertify.alert().setting('closable');
-// //grab the dialog instance using its parameter-less constructor then set multiple settings at once.
-// alertify.alert()
-//   .setting({
-//     'label':'Agree',
-//     'message': 'You picked Captain Janeway! Congratulations, you matched correctly on your first try!' ,
-//   })
-
-
 let quotes = [
     {
       arrayQuote: `"There is coffee in that nebula."`,
@@ -192,8 +181,6 @@ janewayElement.addEventListener("click", function() {
 
 
 
-
-
 sevenElement.addEventListener("click", function() {
     let quoteElement = document.getElementsByTagName('h3');
         if (quoteElement[0].id==='Seven2') {
@@ -273,31 +260,3 @@ doctorElement.addEventListener("click", function() {
             }
         }
   })
-
-
-
-
-// WIP
-  //custom alert
-    // function CustomAlert () {
-    //   this.render = function(dialog) {
-    //     let windowWidth = window.innerWidth;
-    //     let windowHeight = window.innerHeight;
-    //     let dialogoverlay = document.getElementById('dialogoverlay');
-    //     let dialogbox = document.getElementById('dialogbox');
-    //     dialogoverlay.style.display = "block";
-    //     dialogoverlay.style.height = windowHeight + "px";
-    //     dialogbox.style.left = (windowWidth/2) - (550 * .5) + "px";
-    //     dialogbox.style.top = "100px";
-    //     dialogbox.style.display = "block";
-    //     document.getElementById('dialogboxhead').innerHTML = "How'd you do";
-    //     document.getElementById('dialogboxbody').innerHTML = dialog;
-    //     document.getElementById('dialogboxfoot').innerHTML = '<button onclick= "customAlert.ok()">Ok</button>';
-    //   }
-    //   this.ok = function() {
-    //     document.getElementById('dialogbox').style.display = "none";
-    //     document.getElementById('dialogoverlay').style.display = "none";
-    //   }
-    // }
-    //
-    // let customAlert = new CustomAlert();

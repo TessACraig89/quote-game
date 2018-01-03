@@ -1,3 +1,29 @@
+/* PHONE LANDSCAPE VERSION */
+@media only screen and (min-width: 320px) and (orientation : landscape) {
+
+}
+/* PHONE PORTRAIT VERSION */
+@media only screen and (min-width: 320px) and (orientation : portrait) {
+
+}
+
+/* TABLET LANDSCAPE VERSION - not work, are the same as desktop */
+@media only screen and (min-width: 768px) and (orientation : landscape) {
+
+}
+/* TABLET PORTRAIT VERSION */
+@media only screen and (min-width: 768px) and (orientation : portrait) {
+
+}
+/* DESKTOP VERSION */
+@media only screen and (min-width: 980px) {
+
+}
+/* PRINT VERSION */
+@media print {
+
+}
+
 body {
   background-image: url("images/star_trek.png");
   background-size: cover;
@@ -10,30 +36,6 @@ body {
   font-family: "main";
   src: url("fonts/Ba.TTF");
 }
-
-/* #dialogoverlay {
-  display: none;
-  opacity: .8;
-  background-color: red;
-  z-index: 10px;
-}
-
-#dialogbox {
-  display: none;
-  position: fixed;
-  background-color: black;
-  color: white;
-  font: 20px;
-  z-index: 10px;
-}
-
-#dialogboxhead {
-
-}
-
-#dialogboxbody {
-
-} */
 
 h1 {
   position: relative;
