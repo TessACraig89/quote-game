@@ -171,7 +171,7 @@ janewayElement.addEventListener("click", function() {
                 alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 1 attempt remaining!');
             }
             if (count===3) {
-                alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining!');
+                alertify.alert("Incorrect Match", 'You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
                 removeQuote();
                 appendQuote();
                 count = 0;
