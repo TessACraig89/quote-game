@@ -92,93 +92,147 @@ let appendQuote = () => {
 }
 appendQuote();
 
-//sets attemptsLeft starter position to 3
-let attemptsLeft = 3;
+//sets count starter position to 3
+//start count at 1
+let count = 0;
+
+//count function for eveytime janewayElement is clicked it adds 1 to the current count value
+let janewayElement = document.getElementById("janeway");
+janewayElement.onclick = function (){
+	count += 1;
+}
+
+//count function for eveytime sevenElement is clicked it adds 1 to the current count value
+let sevenElement = document.getElementById("seven");
+sevenElement.onclick = function (){
+	count += 1;
+}
+
+//count function for eveytime doctorElement is clicked it adds 1 to the current count value
+let doctorElement = document.getElementById("doctor");
+doctorElement.onclick = function (){
+	count += 1;
+}
+
 
 // removes quoteInnerHTML from quote element which removes the quote from the page
 let removeQuote = () => {
    quote.removeChild(quoteInnerHTML)
 }
 
+let quoteElement
+
 //
-let janewayElement = document.getElementById("janeway");
 janewayElement.addEventListener("click",function(){
-let quoteElement = document.getElementsByTagName('h3');
+quoteElement = document.getElementsByTagName('h3');
     if (quoteElement[0].id==='Janeway1') {
-      if (attemptsLeft===3){
+      if (count===1){
         alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
-        // customAlert.render('You picked Captain Janeway! Congratulations, you matched correctly on your first try!');
         removeQuote();
-        appendQuote()
+        appendQuote();
+        count = 0;
       }
-      if (attemptsLeft===2){
+      if (count===2){
         alert('You picked Captain Janeway! You answered correctly on your second try!');
         removeQuote();
         appendQuote();
+        count = 0;
       }
-      if (attemptsLeft===1){
+      if (count===3){
         alert('You picked Captain Janeway! You answered correctly on third try!');
         removeQuote();
         appendQuote();
+        count = 0;
       }
-    } else {
-          attemptsLeft--
-          alert('You picked the Janeway, sorry, this was incorrect.Try again!');
-          }
-    })
+    } else if (quoteElement[0].id !=='Janeway1'){
+        if (count===1){
+          alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining!');
+        } if (count===2){
+          alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempt remaining!');
+        } if (count===3){
+          alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+          removeQuote();
+          appendQuote();
+          count = 0;
+        }
+      }
+  })
 
 
 
-let sevenElement = document.getElementById("seven");
+
+
 sevenElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
   if (quoteElement[0].id==='Seven2') {
-    if (attemptsLeft===3){
+    if (count===1){
       alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
       removeQuote();
-      appendQuote()
+      appendQuote();
+      count = 0;
     }
-    if (attemptsLeft===2){
+    if (count===2){
       alert('You picked Seven of Nine! You answered correctly on your second try!');
       removeQuote();
-      appendQuote()
+      appendQuote();
+      count = 0;
     }
-    if (attemptsLeft===1){
+    if (count===3){
       alert('You picked Seven of Nine! You answered correctly on third try!');
       removeQuote();
-      appendQuote()
+      appendQuote();
+      count = 0;
     }
-  } else {
-        attemptsLeft--
-        alert('You picked the Seven of Nine, sorry, this was incorrect. Try again!');
-        }
-  })
+  } else if (quoteElement[0].id !=='Seven2'){
+      if (count===1){
+        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 2 attempts remaining!');
+      } if (count===2){
+        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 1 attempt remaining!');
+      } if (count===3){
+        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+        removeQuote();
+        appendQuote();
+        count = 0;
+      }
+    }
+})
 
-let doctorElement = document.getElementById("doctor");
+
+
 doctorElement.addEventListener("click",function(){
 let quoteElement = document.getElementsByTagName('h3');
-    if (quoteElement[0].id==='Doctor3') {
-      if (attemptsLeft===3) {
+    if (quoteElement[0].id ==='Doctor3') {
+      if (count === 1) {
         alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');
         removeQuote();
         appendQuote();
+        count = 0;
       }
-      if (attemptsLeft===2) {
+      if (count === 2) {
         alert('You picked the Doctor! You answered correctly on your second try!');
         removeQuote();
         appendQuote();
+        count = 0;
       }
-      if (attemptsLeft===1) {
+      if (count === 3) {
         alert('You picked the Doctor! You answered correctly on third try!');
         removeQuote();
         appendQuote();
+        count = 0;
       }
-    } else {
-        attemptsLeft--
-        alert('You picked the Doctor, sorry, this was incorrect. Try again!');
+    } else if (quoteElement[0].id !=='Doctor3'){
+        if (count===1){
+          alert('You picked the Doctor, sorry, this was incorrect. You have 2 attempts remaining!');
+        } if (count===2){
+          alert('You picked the Doctor, sorry, this was incorrect. You have 1 attempt remaining!');
+        } if (count===3){
+          alert('You picked the Doctor, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+          removeQuote();
+          appendQuote();
+          count = 0;
         }
-    })
-
+      }
+  })
 
 
 
@@ -187,14 +241,14 @@ let quoteElement = document.getElementsByTagName('h3');
 
 // number of remaining attempts alerts
     // else if (quoteElement[0].id !=='Janeway1'){
-    //       if (attemptsLeft===3) {
-    //       attemptsLeft--
+    //       if (count===3) {
+    //       count--
     //       alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining');
     //       }
-    //       if (attemptsLeft<3 && attemptsLeft>=2) {
+    //       if (count<3 && count>=2) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempts remaining');
     //       }
-    //       if (attemptsLeft<2 && attemptsLeft>=1) {
+    //       if (count<2 && count>=1) {
     //         alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining');
     //         window.location.reload(true);
     //       }
@@ -304,6 +358,5 @@ let quoteElement = document.getElementsByTagName('h3');
 	        <button type="button" class="btn btn-default" data-dismiss="modal" default>Close</button>
 	      </div>
 	    </div>
-
 	  </div>
 	</div> */
