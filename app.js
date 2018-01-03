@@ -1,260 +1,269 @@
-//quotes array
-
 let quotes = [
-  {
-  quote: `"There is coffee in that nebula."`,
-  character: 'Janeway1'
-  },
-  {
-  quote: `"Oh, you know the story. Girl meets boy, girl reprograms boy's subroutines."`,
-  character: 'Janeway1'
-  },
-  {
-  quote: `"At ease before you sprain something."`,
-  character: 'Janeway1'
-  },
-  {
-  quote: `"I understand the concept of humor. It may not be apparent but I am often amused by human behavior."`,
-  character: 'Seven2'
-  },
-  {
-  quote: `"Your appeal to my humanity is pointless."`,
-  character:'Seven2'
-  },
-  {
-  quote: `"Fun will now commence."`,
-  character:'Seven2'
-  },
-  {
-  quote: `"I'll complain if I want to. It's comforting."`,
-  character: 'Doctor3'
-  },
-  {
-  quote: `"You should know I'm a hologram and can't be bent, spindled, or mutilated, so don't bother trying."`,
-  character: 'Doctor3'
-  },
-  {
-  quote: `"The Borg: party-poopers of the galaxy."`,
-  character: 'Doctor3'
-  }
+    {
+      arrayQuote: `"There is coffee in that nebula."`,
+      character: 'Janeway1'
+    },
+    {
+      arrayQuote: `"Oh, you know the story. Girl meets boy, girl reprograms boy's subroutines."`,
+      character: 'Janeway1'
+    },
+    {
+      arrayQuote: `"At ease before you sprain something."`,
+      character: 'Janeway1'
+    },
+    {
+      arrayQuote: `"I understand the concept of humor. It may not be apparent but I am often amused by human behavior."`,
+      character: 'Seven2'
+    },
+    {
+      arrayQuote: `"Your appeal to my humanity is pointless."`,
+      character:'Seven2'
+    },
+    {
+      arrayQuote: `"Fun will now commence."`,
+      character:'Seven2'
+    },
+    {
+      arrayQuote: `"I'll complain if I want to. It's comforting."`,
+      character: 'Doctor3'
+    },
+    {
+      arrayQuote: `"You should know I'm a hologram and can't be bent, spindled, or mutilated, so don't bother trying."`,
+      character: 'Doctor3'
+    },
+    {
+      arrayQuote: `"The Borg: party-poopers of the galaxy."`,
+      character: 'Doctor3'
+    }
 ]
 
-//character cards
 let characterCards = [
-  {
-  name: "janeway",
-  cardImage: "images/janeway_margin.jpg"
-  },
-  {
-  name: "seven",
-  cardImage: "images/seven_margin.jpg"
-  },
-  {
-  name: "doctor",
-  cardImage: "images/doctor_margin.jpg"
-  }
+    {
+      name: "janeway",
+      cardImage: "images/janeway_margin.jpg"
+    },
+    {
+      name: "seven",
+      cardImage: "images/seven_margin.jpg"
+    },
+    {
+      name: "doctor",
+      cardImage: "images/doctor_margin.jpg"
+    }
 ]
 
-//for loop that loops through character cards array and creates and appends character card image to game board
+//for loop that loops through character cards array and creates img tag and appends character card image to game board
   // creates image element and stores in variable card
   // sets img src to be the cardImage url value
   //sets card image element's id to be the name value
   // get game board element by id and stores
   // card is appended to gameBoard
 for (let i = 0; i < characterCards.length; i++) {
-  let card = document.createElement("img");
-  card.src = characterCards[i].cardImage;
-  card.id = characterCards[i].name;
-  let gameBoard = document.getElementById('game-board');
-  gameBoard.append(card)
+    let card = document.createElement("img");
+    card.src = characterCards[i].cardImage;
+    card.id = characterCards[i].name;
+    let gameBoard = document.getElementById('game-board');
+    gameBoard.append(card);
 }
 
-//creates quoteInnerHTML variable
+//creates quoteElement variable outside of click function so it can be globally accessed
 let quoteInnerHTML
 
-// creates h3 element
-  //Math.floor(Math.random()*quotes.length) chooses a random index from the quotes array and stores as source
+//append quote function
+  // creates h3 element
+    //Math.floor(Math.random()*quotes.length) chooses a random index from the quotes array and stores as source
       // math.floor is used to get the nearest rounded down whole number to make sure result isnt out of index range
       //Math.random returns a random number between greater than or equal to 0 and less than 1
-      //*quotes.length is made because 1+high-low is 1 + quotes.length - 1
-  // sets quoteInnerHTML id to the character's name
-  // sets quoteInnerHTML html content to be the quote
-  // gets quote element from document and stores as quote variable
-  // elem 2 inner html, quote, is appended to the quote element
+    //*quotes.length is made because 1+high-low is 1 + quotes.length - 1
+    // sets quoteInnerHTML id to the character's name
+    // sets quoteInnerHTML html content to arrayQuote
+    // gets quote element from document and stores as quote variable
+    // arrayQuote is appended to quote carrying its id
 
 let appendQuote = () => {
     quoteInnerHTML = document.createElement('h3');
     let source = quotes[Math.floor(Math.random()*quotes.length)];
     quoteInnerHTML.id = source.character;
-    quoteInnerHTML.innerHTML = source.quote
+    quoteInnerHTML.innerHTML = source.arrayQuote;
     let quote = document.getElementById('quote');
     quote.append(quoteInnerHTML);
 }
+
+//append first arrayQuote
 appendQuote();
 
-//sets count starter position to 3
-//start count at 1
+
+//start count at 0
 let count = 0;
 
-//count function for eveytime janewayElement is clicked it adds 1 to the current count value
+//gets earlier created img element by id and stores as variable
+//count function for eveytime img element is clicked it adds 1 to the current count value
+//repeat for all three imgs
 let janewayElement = document.getElementById("janeway");
-janewayElement.onclick = function (){
-	count += 1;
+    janewayElement.onclick = function() {
+	     count += 1;
 }
 
-//count function for eveytime sevenElement is clicked it adds 1 to the current count value
 let sevenElement = document.getElementById("seven");
-sevenElement.onclick = function (){
-	count += 1;
+    sevenElement.onclick = function() {
+	     count += 1;
 }
 
-//count function for eveytime doctorElement is clicked it adds 1 to the current count value
 let doctorElement = document.getElementById("doctor");
-doctorElement.onclick = function (){
-	count += 1;
+    doctorElement.onclick = function() {
+	     count += 1;
 }
 
 
 // removes quoteInnerHTML from quote element which removes the quote from the page
 let removeQuote = () => {
-   quote.removeChild(quoteInnerHTML)
+    quote.removeChild(quoteInnerHTML)
 }
 
+//creates quoteElement variable outside of click function so it can be globally accessed
 let quoteElement
 
-//
-janewayElement.addEventListener("click",function(){
-quoteElement = document.getElementsByTagName('h3');
-    if (quoteElement[0].id==='Janeway1') {
-      if (count===1){
-        alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-      if (count===2){
-        alert('You picked Captain Janeway! You answered correctly on your second try!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-      if (count===3){
-        alert('You picked Captain Janeway! You answered correctly on third try!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-    } else if (quoteElement[0].id !=='Janeway1'){
-        if (count===1){
-          alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining!');
-        } if (count===2){
-          alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempt remaining!');
-        } if (count===3){
-          alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
-          removeQuote();
-          appendQuote();
-          count = 0;
+//adds click event to earlier created img element that has function attached
+  // sets earlier created quoteElement variable to be the h3 element  which is the container of the quoteInnerHTML quote and id
+      // if id is correct character name
+          // and current count is 1
+              //alert that correct on first try
+              //call removeQuote
+              //call appendQuote
+              //set current count back to 0 for next round
+      //repeat for correct when current count is 2 and 3
+      // if id is not correct
+          // and current count is 1
+              //alert 2 tries left
+          // repeat for current count as 2
+          //if current count is 0
+              //alert no tries remaining
+              //call removeQuote
+              //call appendQuote
+              //set current count back to 0 for next round
+
+janewayElement.addEventListener("click", function() {
+    quoteElement = document.getElementsByTagName('h3');
+        if (quoteElement[0].id==='Janeway1') {
+            if (count===1) {
+                alert('You picked Captain Janeway! Congratulations, you matched correctly on your first try!')
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count===2) {
+                alert('You picked Captain Janeway! You answered correctly on your second try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count===3) {
+                alert('You picked Captain Janeway! You answered correctly on third try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+        } else if (quoteElement[0].id !=='Janeway1') {
+            if (count===1) {
+                alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining!');
+            }
+            if (count===2) {
+                alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempt remaining!');
+            }
+            if (count===3) {
+                alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
         }
-      }
   })
 
 
 
 
 
-sevenElement.addEventListener("click",function(){
-let quoteElement = document.getElementsByTagName('h3');
-  if (quoteElement[0].id==='Seven2') {
-    if (count===1){
-      alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
-      removeQuote();
-      appendQuote();
-      count = 0;
-    }
-    if (count===2){
-      alert('You picked Seven of Nine! You answered correctly on your second try!');
-      removeQuote();
-      appendQuote();
-      count = 0;
-    }
-    if (count===3){
-      alert('You picked Seven of Nine! You answered correctly on third try!');
-      removeQuote();
-      appendQuote();
-      count = 0;
-    }
-  } else if (quoteElement[0].id !=='Seven2'){
-      if (count===1){
-        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 2 attempts remaining!');
-      } if (count===2){
-        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 1 attempt remaining!');
-      } if (count===3){
-        alert('You picked the Seven of Nine, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-    }
+sevenElement.addEventListener("click", function() {
+    let quoteElement = document.getElementsByTagName('h3');
+        if (quoteElement[0].id==='Seven2') {
+            if (count===1){
+                alert('You picked Seven of Nine! Congratulations, you matched correctly on your first try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count===2){
+                alert('You picked Seven of Nine! You answered correctly on your second try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count===3){
+                alert('You picked Seven of Nine! You answered correctly on third try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+        } else if (quoteElement[0].id !=='Seven2') {
+            if (count===1) {
+                alert('You picked the Seven of Nine, sorry, this was incorrect. You have 2 attempts remaining!');
+            }
+            if (count===2) {
+                alert('You picked the Seven of Nine, sorry, this was incorrect. You have 1 attempt remaining!');
+            }
+            if (count===3) {
+                alert('You picked the Seven of Nine, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+        }
 })
 
 
 
-doctorElement.addEventListener("click",function(){
-let quoteElement = document.getElementsByTagName('h3');
-    if (quoteElement[0].id ==='Doctor3') {
-      if (count === 1) {
-        alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-      if (count === 2) {
-        alert('You picked the Doctor! You answered correctly on your second try!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-      if (count === 3) {
-        alert('You picked the Doctor! You answered correctly on third try!');
-        removeQuote();
-        appendQuote();
-        count = 0;
-      }
-    } else if (quoteElement[0].id !=='Doctor3'){
-        if (count===1){
-          alert('You picked the Doctor, sorry, this was incorrect. You have 2 attempts remaining!');
-        } if (count===2){
-          alert('You picked the Doctor, sorry, this was incorrect. You have 1 attempt remaining!');
-        } if (count===3){
-          alert('You picked the Doctor, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
-          removeQuote();
-          appendQuote();
-          count = 0;
+doctorElement.addEventListener("click", function() {
+    let quoteElement = document.getElementsByTagName('h3');
+        if (quoteElement[0].id ==='Doctor3') {
+            if (count === 1) {
+                alert('You picked the Doctor! Congratulations, you matched correctly on your first try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count === 2) {
+                alert('You picked the Doctor! You answered correctly on your second try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+            if (count === 3) {
+                alert('You picked the Doctor! You answered correctly on third try!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
+        } else if (quoteElement[0].id !=='Doctor3') {
+            if (count===1) {
+                alert('You picked the Doctor, sorry, this was incorrect. You have 2 attempts remaining!');
+            }
+            if (count===2) {
+                alert('You picked the Doctor, sorry, this was incorrect. You have 1 attempt remaining!');
+            }
+            if (count===3) {
+                alert('You picked the Doctor, sorry, this was incorrect. You have 0 attempts remaining. Try this next quote!');
+                removeQuote();
+                appendQuote();
+                count = 0;
+            }
         }
-      }
   })
 
 
 
 
 // WIP
-
-// number of remaining attempts alerts
-    // else if (quoteElement[0].id !=='Janeway1'){
-    //       if (count===3) {
-    //       count--
-    //       alert('You picked the Janeway, sorry, this was incorrect. You have 2 attempts remaining');
-    //       }
-    //       if (count<3 && count>=2) {
-    //         alert('You picked the Janeway, sorry, this was incorrect. You have 1 attempts remaining');
-    //       }
-    //       if (count<2 && count>=1) {
-    //         alert('You picked the Janeway, sorry, this was incorrect. You have 0 attempts remaining');
-    //         window.location.reload(true);
-    //       }
-    //     }
-
-    //WIP custom alert
+  //custom alert
     // function CustomAlert () {
     //   this.render = function(dialog) {
     //     let windowWidth = window.innerWidth;
@@ -277,86 +286,3 @@ let quoteElement = document.getElementsByTagName('h3');
     // }
     //
     // let customAlert = new CustomAlert();
-
-// remove quoteInnerHTML instead of reload
-
-
-//popup function
-// let correctPopup = () => {
-//     let popup = document.getElementById("myPopup");
-//     popup.classList.toggle("show");
-// }
-  //html
-  // <div class="popup" onclick="correctPopup()">Click me!
-  //   <span class="popuptext" id="myPopup">You picked Captain Janeway! Congratulations, you matched correctly on your first try!</span>
-  // </div>
-  //css
-  /* Popup container */
-  // .popup {
-  //     position: relative;
-  //     display: inline-block;
-  //     cursor: pointer;
-  // }
-  // .popup .popuptext {
-  //     visibility: hidden;
-  //     width: 160px;
-  //     background-color: #555;
-  //     color: #fff;
-  //     text-align: center;
-  //     border-radius: 6px;
-  //     padding: 8px 0;
-  //     position: absolute;
-  //     z-index: 1;
-  //     bottom: 125%;
-  //     left: 50%;
-  //     margin-left: -80px;
-  // }
-  //
-  // /* Popup arrow */
-  // .popup .popuptext::after {
-  //     content: "";
-  //     position: absolute;
-  //     top: 100%;
-  //     left: 50%;
-  //     margin-left: -5px;
-  //     border-width: 5px;
-  //     border-style: solid;
-  //     border-color: #555 transparent transparent transparent;
-  // }
-  //
-  // /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  // .popup .show {
-  //     visibility: visible;
-  //     -webkit-animation: fadeIn 1s;
-  //     animation: fadeIn 1s
-  // }
-  //
-  // /* Add animation (fade in the popup) */
-  // @-webkit-keyframes fadeIn {
-  //     from {opacity: 0;}
-  //     to {opacity: 1;}
-  // }
-  //
-  // @keyframes fadeIn {
-  //     from {opacity: 0;}
-  //     to {opacity:1 ;}
-  // }
-
-
-//
-
-/* <div id="modalInfo" class="modal fade" role="dialog">
-	  <div class="modal-dialog modal-md">
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header float-center">
-	        <h2>How to Play</h2>
-	      </div>
-	      <div class="modal-body text-left">
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal" default>Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div> */
