@@ -1,6 +1,6 @@
 # Star Trek Card Matching Game
 
-##Find Game Here
+## Find Game Here
 
 https://tessacraig89.github.io/star_trek_quote_matching_game/
 
