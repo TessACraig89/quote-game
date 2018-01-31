@@ -8,7 +8,7 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 
 ## Getting Started
-1. Fork it (<https://github.com/TessACraig89/u1_w3_star_trek_matching_game/fork>)
+1. Fork it [here](<https://github.com/TessACraig89/u1_w3_star_trek_matching_game/fork>)
 2. Clone it onto your local machine
 3. Open index.html in browser
 
