@@ -31,5 +31,10 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 ## WIP
 
 - single use of each quote
+- additional characters and quotes
+- additional series
+- scoreboard
+- positioning
+- styling
 - animation
 - media queries
