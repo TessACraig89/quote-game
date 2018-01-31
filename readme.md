@@ -23,9 +23,9 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 ## Contributing
 
 1. Fork it [here](<https://github.com/TessACraig89/u1_w3_star_trek_matching_game/fork>)
-2. Create your feature branch `git checkout -b feature/fooBar`
-3. Commit your changes `git commit -am 'Add some fooBar'`
-4. Push to the branch `git push origin feature/fooBar`
+2. Create your feature branch `git checkout -b new-feature`
+3. Commit your changes `git commit -m 'adds new feature'`
+4. Push to the branch `git push origin new-feature`
 5. Create a new Pull Request
 
 ## WIP
