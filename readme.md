@@ -4,9 +4,6 @@ Star Trek Quote Matching Game is a single player game in which the user is prese
 
 You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matching_game/)
 
-## Motivation
-
-
 ## Getting Started
 1. Fork it [here](<https://github.com/TessACraig89/u1_w3_star_trek_matching_game/fork>)
 2. Clone it onto your local machine
