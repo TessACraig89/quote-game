@@ -9,7 +9,7 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 2. Clone it onto your local machine
 3. Open index.html in browser
 
-## Built With
+## Technologies
 
 [Javascript](https://www.javascript.com/)
 
@@ -17,15 +17,6 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 [Bootstrap](https://getbootstrap.com/)
 
-## Contact
-
-Tess Ashley Craig
-
-tessashley.webdev@gmail.com 
-
-[Linkedin](https://www.linkedin.com/in/tessashleycraig/)
-
-[GitHub](https://github.com/TessACraig89)
 
 ## Contributing
 
