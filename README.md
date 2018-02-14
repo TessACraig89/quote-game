@@ -19,7 +19,7 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 ## Minimum Viable Product
 
-The Minimum Viable Product version of the Star Trek Quote Matching web app is a much simplified version of what the final app will be. What follows is the specs for the minimal viable product. A central Kanban board tracking development is located here on [Trello](https://trello.com/b/ei25yci7/austin-wall-art). For the most up to date developments, take a quick look inside.
+The Minimum Viable Product version of the Star Trek Quote Matching web app is a much simplified version of what the final app will be. What follows is the specs for the minimal viable product. A central Kanban board tracking development is located here on [Trello](https://trello.com/b/49EmLmq0/star-trek-project). For the most up to date developments, take a quick look inside.
 
 ## Contributing
 
