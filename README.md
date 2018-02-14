@@ -1,6 +1,6 @@
-# Star Trek Card Matching Game
+# Star Trek Quote Matching Game
 
-Star Trek Quote Matching Game is a single player game in which the user is presented a quote and 3 cards containing a character's image and name. The goal of the game is to match the quote to the correct character in the three turns provided.
+A single player game in which the user is presented a quote and 3 cards containing a character's image and name. The goal of the game is to match the quote to the correct character in the three turns provided.
 
 You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matching_game/)
 
@@ -17,6 +17,9 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 [Bootstrap](https://getbootstrap.com/)
 
+## Minimum Viable Product
+
+The Minimum Viable Product version of the Star Trek Quote Matching web app is a much simplified version of what the final app will be. What follows is the specs for the minimal viable product. A central Kanban board tracking development is located here on [Trello](https://trello.com/b/ei25yci7/austin-wall-art). For the most up to date developments, take a quick look inside.
 
 ## Contributing
 
