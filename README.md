@@ -39,3 +39,5 @@ The Minimum Viable Product version of the Star Trek Quote Matching web app is a 
 - styling
 - animation
 - media queries
+
+ > To learn more about the developer of Psyche Tracker, Tess Craig, visit her [Linkedin](https://www.linkedin.com/in/tessashleycraig/) and view her other [Github](https://github.com/TessACraig89) projects.
