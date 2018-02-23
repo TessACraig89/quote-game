@@ -19,7 +19,7 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 - [Alertify](http://alertifyjs.com/) - A javascript framework for developing pretty browser dialogs and notifications.
 
-- [Bootstrap](https://getbootstrap.com/) - A front-end library for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.
+- [Bootstrap4](https://getbootstrap.com/) - A front-end library for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.
 
 ## Minimum Viable Product
 
