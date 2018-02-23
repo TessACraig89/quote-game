@@ -11,11 +11,15 @@ You can play the game [here](https://tessacraig89.github.io/star_trek_quote_matc
 
 ## Technologies
 
-[Javascript](https://www.javascript.com/)
+- [Javascript](https://www.javascript.com/) - An object-oriented computer programming language commonly used to create interactive effects within web browsers.
 
-[Alertify](http://alertifyjs.com/)
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - HTML5 is a markup language used for structuring and presenting content on the World Wide Web.
 
-[Bootstrap](https://getbootstrap.com/)
+- [CSS3](http://www.css3.info/) - Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language
+
+- [Alertify](http://alertifyjs.com/) - A javascript framework for developing pretty browser dialogs and notifications.
+
+- [Bootstrap](https://getbootstrap.com/) - A front-end library for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.
 
 ## Minimum Viable Product
 
