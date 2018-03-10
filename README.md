@@ -18,6 +18,6 @@ Check out the [Star Trek Quote Matching Game Demo](https://tessacraig89.github.i
 
 ## Minimum Viable Product
 
-The Minimum Viable Product version of the Star Trek Quote Matching web app is a much simplified version of what the final app will be. What follows is the specs for the minimal viable product. A central Kanban board tracking development is located here on [Trello](https://trello.com/b/49EmLmq0/star-trek-project). For the most up to date developments, take a quick look inside.
+The Minimum Viable Product version of the Star Trek Quote Matching Game web app is a much simplified version of what the final app will be. What follows is the specs for the minimal viable product. A central Kanban board tracking development is located here on [Trello](https://trello.com/b/49EmLmq0/star-trek-project). For the most up to date developments, take a quick look inside.
 
- > To learn more about the developer of Psyche Tracker, Tess Craig, visit her [Linkedin](https://www.linkedin.com/in/tessashleycraig/) and view her other [Github](https://github.com/TessACraig89) projects.
+ > To learn more about the developer of Star Trek Quote Matching Game, Tess Craig, visit her [Linkedin](https://www.linkedin.com/in/tessashleycraig/) and view her other [Github](https://github.com/TessACraig89) projects.
