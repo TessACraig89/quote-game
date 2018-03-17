@@ -1,6 +1,6 @@
 # Star Trek Quote Matching Game
 
-A single player game in which the user is presented a quote and 3 cards containing a character's image and name. The goal of the game is to match the quote to the correct character in the three turns provided.
+Star Trek Quote Matching Game is for all the Trekkies out there! Players are presented with a quote and three characters to choose from, for each quote the player is given 3 chances to guess which character said that quote. My motivation for developing Star Trek Quote Matching Game was that I love Star Trek and wanted a new party game for all my nerdy friends and I.
 
 Check out the [Star Trek Quote Matching Game Demo](https://tessacraig89.github.io/star_trek_quote_matching_game/) here!
 
