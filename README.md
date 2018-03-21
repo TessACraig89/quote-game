@@ -4,6 +4,8 @@ Star Trek Quote Matching Game is for all the Trekkies out there! Players are pre
 
 Check out the [Star Trek Quote Matching Game Demo](https://tessacraig89.github.io/star_trek_quote_matching_game/) here!
 
+![Preview](./images/star-trek2.png)
+
 ## Technologies
 
 - [Javascript](https://www.javascript.com/) - An object-oriented computer programming language commonly used to create interactive effects within web browsers.
