@@ -89,12 +89,12 @@ img {
   color: white;
   border-bottom: 5px solid white;
   padding: 10px;
+  border: red 5px solid;
   border-radius: 15px;
   font-weight: bolder;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
   position: relative;
-  top: 0px;
 }
 
 #quote {
