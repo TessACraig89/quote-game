@@ -47,7 +47,7 @@ h1 {
   -webkit-text-fill-color: #FFFFFF
 }
 
-h2 {
+.instructionsTitle {
   font-family: 'Ubuntu', sans-serif;
   font-size: 30px;
   padding-top: 30px;
@@ -60,7 +60,7 @@ h2 {
   bottom: 70px;
 }
 
-#instructions {
+.instructions {
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 3px;
   font-size: 25px;
@@ -83,7 +83,7 @@ img {
   height: 316;
 }
 
-#click {
+.click {
   display: inline;
   font-size: 23px;
   color: white;
