@@ -47,10 +47,6 @@ h1 {
   -webkit-text-fill-color: #FFFFFF
 }
 
-main {
-  border: red 2px solid;
-}
-
 
 #instructionsTitle {
   font-family: 'Ubuntu', sans-serif;
@@ -116,8 +112,6 @@ img {
   border: 3px solid #19565A;
   border-radius: 20px;
   font-style: italic;
-  /* position: relative;
-  bottom: 65px; */
 }
 
 footer {
