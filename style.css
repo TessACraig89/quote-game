@@ -109,15 +109,15 @@ img {
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
   font-size: 25px;
-  margin: 100px;
+  margin-top: 100px;
   background-color: black;
   display: inline-block;
   padding: 5px;
   border: 3px solid #19565A;
   border-radius: 20px;
   font-style: italic;
-  position: relative;
-  bottom: 65px;
+  /* position: relative;
+  bottom: 65px; */
 }
 
 footer {
