@@ -171,6 +171,8 @@ footer {
   text-decoration: none;
   border-radius: 15px;
   font-weight: bolder;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 #profileLinks {
