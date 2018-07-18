@@ -54,6 +54,7 @@ h1 {
   border-bottom: 5px solid #19565A;
   border-radius: 15px;
   display: inline;
+  padding: 10px;
 }
 
 #instructions {
@@ -159,6 +160,15 @@ footer {
   text-decoration: none;
   border-radius: 15px;
   font-weight: bolder;
+}
+
+#about {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  border-bottom: 5px solid #19565A;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 10px;
 }
 
 #portfolio {
