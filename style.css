@@ -51,12 +51,6 @@ main {
   border: red 2px solid;
 }
 
-#instructionsSection{
-  border: blue solid 2px;
-  /* height: 300px; */
-  column-count: 1;
-  display: block;
-}
 
 #instructionsTitle {
   font-family: 'Ubuntu', sans-serif;
@@ -95,13 +89,16 @@ img {
   height: 316;
 }
 
-.click {
+.div {
+  border-bottom: 5px solid white;
+  border-radius: 15px;
+}
+
+#click {
   display: inline;
   font-size: 23px;
   color: white;
-  border-bottom: 5px solid white;
   padding: 10px;
-  border-radius: 15px;
   font-weight: bolder;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
