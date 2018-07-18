@@ -121,13 +121,13 @@ footer {
   width: 100%;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 5px;
-
+  margin-top: 65px;
 }
 
 #github {
-  position: relative;
+  /* position: relative;
   right: 500px;
-  top: 50px;
+  top: 50px; */
   font-size: 15px;
   color: black;
   border: 3px solid black;
@@ -147,10 +147,10 @@ footer {
 }
 
 #linkedin {
-  position: relative;
-  left: 500px;
+  /* position: relative;
+  left: 500px; */
   color: white;
-  bottom: 50px;
+  /* bottom: 50px; */
   font-size: 15px;
   color: black;
   border: 3px solid black;
@@ -159,6 +159,23 @@ footer {
   text-decoration: none;
   border-radius: 15px;
   font-weight: bolder;
+}
+
+#portfolio {
+  color: white;
+  font-size: 15px;
+  color: black;
+  border: 3px solid black;
+  background-color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bolder;
+}
+
+#profileLinks {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 a:hover {
